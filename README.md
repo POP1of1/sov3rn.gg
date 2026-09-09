@@ -45,6 +45,9 @@ Pages for this repository."* Two ways through, operator's call:
 
    ```
    make site-publish            # pushes ONLY the site/ subtree as that repo's main
+   # no `make` on the box (Windows)? the same two commands:
+   python tools/build_site.py
+   git push -f https://github.com/POP1of1/sov3rn.gg.git $(git subtree split --prefix=site main):main
    ```
 
    and in that repo: Settings → Pages → Source: `main`, folder `/ (root)` → custom domain
