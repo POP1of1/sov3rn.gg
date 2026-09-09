@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Primates Arena — Rulebook</title>
+<meta name="description" content="The full written rules of the Primates Arena: scoring, honors, the Eliminator, the season, the house rules, and the receipts.">
+<meta name="theme-color" content="#0A0510">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="canonical" href="https://sov3rn.gg/arena/rulebook.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Primates Arena — Rulebook">
+<meta property="og:description" content="The full written rules of the Primates Arena: scoring, honors, the Eliminator, the season, the house rules, and the receipts.">
+<meta property="og:image" content="https://sov3rn.gg/arena/og-arena.png">
+<meta property="og:url" content="https://sov3rn.gg/arena/rulebook.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Primates Arena — Rulebook">
+<meta name="twitter:description" content="The full written rules of the Primates Arena: scoring, honors, the Eliminator, the season, the house rules, and the receipts.">
+<meta name="twitter:image" content="https://sov3rn.gg/arena/og-arena.png">
+</head>
+<body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+  :root{
+    --night:#0A0510; --panel:#130A1B; --panel2:#1A0F24; --line:#2B1C36; --line2:#3A2848;
+    --red:#E8352E; --red-deep:#9E1F1A; --gold:#C9A558; --gold-dim:#8F7640;
+    --bone:#F2EBDD; --bone-2:#CFC6B7; --dim:#9A8FA6; --turf:#12241A; --turf-line:#264A34;
+    --display:"Big Shoulders Display",Impact,"Arial Narrow",sans-serif;
+    --body:"Barlow","Helvetica Neue",Arial,sans-serif;
+    --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  html{color-scheme:dark}
+  body{margin:0;background:var(--night);color:var(--bone);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-dim)}
+  a:hover,a:focus-visible{color:var(--bone);border-color:var(--bone)}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  code,.cmd{font-family:var(--mono);font-weight:500}
+  .cmd{display:inline-block;background:var(--panel2);border:1px solid var(--line2);border-radius:4px;padding:1px 8px;color:var(--bone);font-size:.92em;white-space:nowrap}
+
+  /* ---------- masthead ---------- */
+  .mast{border-bottom:1px solid var(--line);padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .mast .brand{display:flex;align-items:center;gap:14px}
+  .mast svg{width:40px;height:40px;color:var(--bone)}
+  .mast .wm{font-family:var(--display);font-weight:900;font-size:26px;letter-spacing:.04em;line-height:1;text-transform:uppercase}
+  .mast .wm small{display:block;font-family:var(--body);font-weight:500;font-size:11px;letter-spacing:.22em;color:var(--dim);margin-top:4px}
+  .mast .tag{font-family:var(--mono);font-size:12px;color:var(--dim);letter-spacing:.06em;white-space:nowrap}
+  @media (max-width:640px){.mast .tag{display:none}}
+
+  /* ---------- hero (the thesis) ---------- */
+  .hero{padding:56px 24px 40px;border-bottom:1px solid var(--line);background:
+    radial-gradient(1200px 400px at 20% 0%, rgba(232,53,46,.10), transparent 60%),
+    var(--night)}
+  .hero .in{max-width:1080px;margin:0 auto}
+  .eyebrow{font-family:var(--body);font-weight:600;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+  h1{font-family:var(--display);font-weight:900;text-transform:uppercase;line-height:.92;letter-spacing:.005em;margin:14px 0 22px;font-size:clamp(56px,9.5vw,132px);text-wrap:balance}
+  h1 .r{color:var(--red)}
+  .hero p.lede{font-size:clamp(18px,2vw,22px);max-width:34em;color:var(--bone-2);margin:0 0 30px}
+  .board{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line2);background:var(--panel)}
+  .board div{padding:16px 18px;border-right:1px solid var(--line2)}
+  .board div:last-child{border-right:0}
+  .board b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(30px,4vw,48px);line-height:1;font-variant-numeric:tabular-nums}
+  .board span{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-top:6px}
+  @media (max-width:720px){.board{grid-template-columns:repeat(2,1fr)}.board div:nth-child(2){border-right:0}.board div:nth-child(-n+2){border-bottom:1px solid var(--line2)}}
+  .cta{display:inline-flex;align-items:center;gap:10px;margin-top:26px;background:var(--red);color:#fff;border:0;border-radius:4px;padding:14px 22px;font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:.06em;text-transform:uppercase}
+  .cta code{font-family:var(--mono);font-weight:700;font-size:17px;background:rgba(0,0,0,.25);padding:3px 9px;border-radius:3px}
+
+  /* ---------- body layout ---------- */
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:200px minmax(0,1fr);gap:48px}
+  @media (max-width:860px){.wrap{grid-template-columns:1fr;gap:0}}
+  nav.idx{position:sticky;top:0;align-self:start;padding:36px 0 24px}
+  @media (max-width:860px){nav.idx{position:static;padding:24px 0 0;border-bottom:1px solid var(--line)}}
+  nav.idx .eyebrow{margin-bottom:12px}
+  nav.idx ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+  @media (max-width:860px){nav.idx ol{flex-direction:row;flex-wrap:wrap;gap:6px 14px}}
+  nav.idx a{display:block;border:0;color:var(--dim);font-size:15px;padding:5px 0 5px 12px;border-left:2px solid transparent}
+  nav.idx a:hover,nav.idx a:focus-visible{color:var(--bone);border-left-color:var(--gold)}
+  @media (max-width:860px){nav.idx a{padding:4px 0;border-left:0}}
+  main{padding:36px 0 80px;max-width:66ch}
+  section{padding:36px 0;border-bottom:1px solid var(--line)}
+  section:last-of-type{border-bottom:0}
+  h2{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(34px,4.4vw,48px);line-height:.95;margin:8px 0 18px;letter-spacing:.01em;text-wrap:balance}
+  h3{font-family:var(--body);font-weight:600;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:28px 0 10px}
+  p{margin:0 0 14px}
+  p.big{font-size:19px}
+  ul{margin:0 0 14px;padding-left:1.1em}
+  li{margin:6px 0}
+  .callout{border-left:3px solid var(--red);background:var(--panel);padding:14px 18px;margin:18px 0;color:var(--bone-2)}
+  .callout b{color:var(--bone)}
+
+  /* ---------- pick card mock ---------- */
+  .slate{border:1px solid var(--line2);background:var(--panel);margin:18px 0;font-size:15px}
+  .slate .hd{display:flex;justify-content:space-between;padding:10px 14px;border-bottom:1px solid var(--line2);font-family:var(--mono);font-size:12px;color:var(--dim);letter-spacing:.04em}
+  .slate .row{display:grid;grid-template-columns:1fr auto;gap:12px;padding:10px 14px;border-bottom:1px solid var(--line)}
+  .slate .row:last-child{border-bottom:0}
+  .slate .teams{display:flex;flex-direction:column;gap:2px}
+  .slate .teams em{font-style:normal;color:var(--dim);font-size:13px}
+  .slate .px{font-family:var(--mono);font-weight:700;text-align:right;font-variant-numeric:tabular-nums;color:var(--bone-2)}
+  .slate .px.dog{color:var(--gold)}
+  .slate .px small{display:block;font-weight:500;font-size:11px;color:var(--dim)}
+  .slate .picked{background:rgba(201,165,88,.08)}
+  .slate .picked .px{color:var(--gold)}
+  .math{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line2);border:1px solid var(--line2);margin:18px 0}
+  .math div{background:var(--panel);padding:14px 16px}
+  .math b{display:block;font-family:var(--display);font-weight:800;font-size:34px;line-height:1;font-variant-numeric:tabular-nums}
+  .math .neg b{color:var(--red)}
+  .math .pos b{color:var(--gold)}
+  .math span{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-top:6px}
+  @media (max-width:520px){.math{grid-template-columns:1fr}}
+
+  /* ---------- ladder ---------- */
+  .ladder{list-style:none;margin:18px 0;padding:0;border:1px solid var(--line2)}
+  .ladder li{display:grid;grid-template-columns:64px 1fr auto;align-items:center;gap:14px;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--panel)}
+  .ladder li:last-child{border-bottom:0}
+  .ladder .wk{font-family:var(--display);font-weight:900;font-size:36px;line-height:1;color:var(--gold);font-variant-numeric:tabular-nums}
+  .ladder .wk small{display:block;font-family:var(--body);font-weight:600;font-size:10px;letter-spacing:.18em;color:var(--dim)}
+  .ladder .nm{font-weight:600;font-size:18px}
+  .ladder .nm em{display:block;font-style:normal;font-weight:400;font-size:14px;color:var(--dim)}
+  .ladder .pill{font-family:var(--mono);font-size:12px;color:var(--bone-2);border:1px solid var(--line2);border-radius:999px;padding:3px 10px;white-space:nowrap}
+  .ladder li.top{background:linear-gradient(90deg,rgba(201,165,88,.14),var(--panel) 60%)}
+  .rungs{display:flex;gap:10px;margin:14px 0 4px;flex-wrap:wrap}
+  .rungs div{flex:1 1 140px;border:1px solid var(--line2);background:var(--panel);padding:12px 14px}
+  .rungs b{font-family:var(--display);font-weight:800;font-size:30px;line-height:1;display:block}
+  .rungs span{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);display:block;margin-top:4px}
+
+  /* ---------- eliminator states ---------- */
+  .states{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:stretch;gap:0;margin:18px 0}
+  .states .st{border:1px solid var(--line2);background:var(--turf);padding:14px 16px;border-top:4px solid var(--turf-line)}
+  .states .st.bone{border-top-color:var(--gold)}
+  .states .st.fall{border-top-color:var(--red);background:var(--panel)}
+  .states .st b{font-family:var(--display);font-weight:800;font-size:26px;line-height:1;display:block;text-transform:uppercase}
+  .states .st span{display:block;font-size:13px;color:var(--bone-2);margin-top:6px}
+  .states .arr{display:flex;align-items:center;padding:0 8px;color:var(--dim);font-family:var(--mono);font-size:12px;white-space:nowrap}
+  @media (max-width:640px){.states{grid-template-columns:1fr}.states .arr{padding:6px 0;justify-content:center}}
+
+  /* ---------- calendar ---------- */
+  .cal{border:1px solid var(--line2);margin:18px 0}
+  .cal div{display:grid;grid-template-columns:118px 1fr;gap:14px;padding:11px 16px;border-bottom:1px solid var(--line);background:var(--panel)}
+  .cal div:last-child{border-bottom:0}
+  .cal time{font-family:var(--mono);font-weight:700;font-size:13px;color:var(--gold);font-variant-numeric:tabular-nums;padding-top:3px}
+  .cal .live time{color:var(--red)}
+  .cal p{margin:0}
+  .cal p em{font-style:normal;color:var(--dim)}
+
+  /* ---------- rules / receipts / commands ---------- */
+  .rules{margin:18px 0;padding:0;list-style:none;counter-reset:r}
+  .rules li{padding:12px 0 12px 44px;border-bottom:1px solid var(--line);position:relative}
+  .rules li:last-child{border-bottom:0}
+  .rules li::before{content:"";position:absolute;left:10px;top:20px;width:14px;height:14px;border:2px solid var(--gold);transform:rotate(45deg)}
+  .rules b{display:block;font-weight:600}
+  .receipts{border:1px solid var(--line2);margin:18px 0}
+  .receipts div{display:flex;flex-direction:column;gap:6px;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--panel)}
+  .receipts div:last-child{border-bottom:0}
+  .receipts b{font-weight:600}
+  .receipts em{display:block;font-style:normal;font-size:14px;color:var(--dim)}
+  .receipts .pts{font-family:var(--mono);font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums;font-size:14px;line-height:1.6}
+  .tbd{background:rgba(232,53,46,.18);border:1px dashed var(--red);padding:0 6px;border-radius:3px;color:var(--bone)}
+  .cmds{display:grid;grid-template-columns:auto 1fr;gap:10px 18px;margin:18px 0;align-items:baseline}
+  .cmds .cmd{font-size:15px}
+  @media (max-width:520px){.cmds{grid-template-columns:1fr;gap:4px}.cmds p{margin-bottom:12px}}
+
+  footer{border-top:1px solid var(--line);padding:26px 24px 40px;text-align:center;color:var(--dim);font-size:13px;letter-spacing:.06em}
+  footer b{color:var(--bone-2);font-weight:600}
+  @media (prefers-reduced-motion:no-preference){a,nav.idx a{transition:color .12s,border-color .12s}}
+</style>
+
+<header class="mast">
+  <div class="brand">
+    <svg viewBox="0 0 260 260" aria-label="SOV3RN emblem" role="img"><path fill="currentColor" d="M226.80 130.0C226.80 183.46 183.46 226.80 130.0 226.80C76.54 226.80 33.20 183.46 33.20 130.0C33.20 76.54 76.54 33.20 130.0 33.20C183.46 33.20 226.80 76.54 226.80 130.0ZM225.20 130.0C225.20 77.42 182.58 34.80 130.0 34.80C77.42 34.80 34.80 77.42 34.80 130.0C34.80 182.58 77.42 225.20 130.0 225.20C182.58 225.20 225.20 182.58 225.20 130.0ZM191.10 130.0C191.10 163.74 163.74 191.10 130.0 191.10C96.26 191.10 68.90 163.74 68.90 130.0C68.90 96.26 96.26 68.90 130.0 68.90C163.74 68.90 191.10 96.26 191.10 130.0ZM188.90 130.0C188.90 97.47 162.53 71.10 130.0 71.10C97.47 71.10 71.10 97.47 71.10 130.0C71.10 162.53 97.47 188.90 130.0 188.90C162.53 188.90 188.90 162.53 188.90 130.0ZM168.30 130.0C168.30 131.78 168.18 133.53 167.94 135.25C169.73 137.82 170.73 140.91 170.73 144.18C170.73 154.77 161.32 162.61 147.61 164.02C142.34 166.75 136.35 168.30 130.0 168.30C123.65 168.30 117.66 166.75 112.39 164.02C98.68 162.61 89.27 154.77 89.27 144.18C89.27 140.91 90.27 137.82 92.06 135.25C91.82 133.53 91.70 131.78 91.70 130.0C91.70 125.53 92.47 121.24 93.87 117.25C93.07 115.57 92.63 113.78 92.63 112.02C92.63 104.03 100.24 97.92 111.19 96.63C116.75 93.49 123.16 91.70 130.0 91.70C136.84 91.70 143.25 93.49 148.81 96.63C159.76 97.92 167.37 104.03 167.37 112.02C167.37 113.78 166.93 115.57 166.13 117.25C167.53 121.24 168.30 125.53 168.30 130.0ZM123.35 129.40C119.51 129.02 117.88 128.92 116.63 128.92C112.31 128.92 107.70 130.26 105.11 132.28C102.04 134.68 100.12 139.38 100.12 144.38C100.12 147.01 100.56 149.35 101.40 151.37C103.38 154.02 105.72 156.38 108.35 158.39C110.65 159.40 113.40 159.93 116.54 159.93C119.49 159.93 122.16 159.51 124.42 158.66C124.71 158.90 125.01 159.13 125.32 159.35C126.79 160.38 128.34 161.24 130.0 161.94C126.94 163.22 123.54 163.95 119.64 164.17C122.92 165.17 126.40 165.70 130.0 165.70C133.60 165.70 137.08 165.17 140.36 164.17C141.24 164.22 142.15 164.25 143.08 164.25C144.64 164.25 146.15 164.17 147.61 164.02C158.42 158.41 166.22 147.80 167.94 135.25C167.27 134.28 166.49 133.39 165.61 132.58C165.67 131.73 165.70 130.87 165.70 130.0C165.70 126.57 165.22 123.26 164.32 120.12C165.04 119.23 165.65 118.26 166.13 117.25C163.03 108.47 156.81 101.15 148.81 96.63C147.40 96.46 145.93 96.38 144.42 96.38C143.67 96.38 142.93 96.40 142.21 96.44C138.40 95.06 134.29 94.30 130.0 94.30C125.71 94.30 121.60 95.06 117.79 96.44C122.58 96.73 126.64 97.98 129.98 100.31C129.98 100.32 129.99 100.32 130.0 100.33C128.44 101.36 127.10 102.57 126.01 103.88C123.90 101.96 120.27 100.70 116.15 100.70C108.09 100.70 103.0 105.40 103.0 112.70C103.0 116.06 104.44 119.61 106.55 121.43C109.05 123.83 113.85 125.27 118.74 125.27C119.80 125.27 121.05 125.18 123.35 124.98ZM136.65 129.40V124.98C138.95 125.18 140.20 125.27 141.26 125.27C146.15 125.27 150.95 123.83 153.45 121.43C155.56 119.61 157.0 116.06 157.0 112.70C157.0 105.40 151.91 100.70 143.85 100.70C139.73 100.70 136.10 101.96 133.99 103.88C132.90 102.57 131.56 101.36 130.0 100.33C130.01 100.32 130.02 100.32 130.02 100.31C133.36 97.98 137.42 96.73 142.21 96.44C152.87 100.32 161.16 109.13 164.32 120.12C163.61 120.99 162.80 121.79 161.90 122.49C159.30 124.50 156.90 125.46 151.43 126.71C157.38 127.86 159.78 128.73 162.86 130.55C163.86 131.14 164.78 131.82 165.61 132.58C165.11 139.60 162.58 146.06 158.60 151.37C159.44 149.35 159.88 147.01 159.88 144.38C159.88 139.38 157.96 134.68 154.89 132.28C152.30 130.26 147.69 128.92 143.37 128.92C142.12 128.92 140.49 129.02 136.65 129.40ZM130.0 154.03C129.46 155.25 128.37 156.53 127.10 157.34C126.29 157.86 125.39 158.30 124.42 158.66C121.21 156.06 119.27 152.72 119.27 149.46C119.27 145.82 121.86 142.84 125.13 142.84C127.40 142.84 129.17 143.97 130.0 145.78C129.67 146.50 129.50 147.32 129.50 148.22C129.50 149.26 129.50 149.36 130.0 150.95C129.95 151.11 129.89 151.29 129.83 151.48C129.74 151.86 129.64 152.25 129.64 152.54C129.64 153.00 129.77 153.51 130.0 154.03ZM130.0 150.95C130.50 149.36 130.50 149.26 130.50 148.22C130.50 147.32 130.33 146.50 130.0 145.78C130.83 143.97 132.60 142.84 134.87 142.84C138.14 142.84 140.73 145.82 140.73 149.46C140.73 152.72 138.79 156.06 135.58 158.66C134.61 158.30 133.71 157.86 132.90 157.34C131.63 156.53 130.54 155.25 130.0 154.03C130.23 153.51 130.36 153.00 130.36 152.54C130.36 152.25 130.26 151.86 130.17 151.48C130.11 151.29 130.05 151.11 130.0 150.95ZM95.68 120.12C94.78 123.26 94.30 126.57 94.30 130.0C94.30 130.87 94.33 131.73 94.39 132.58C95.22 131.82 96.14 131.14 97.14 130.55C100.22 128.73 102.62 127.86 108.57 126.71C103.10 125.46 100.70 124.50 98.10 122.49C97.20 121.79 96.39 120.99 95.68 120.12ZM151.65 158.39C148.30 160.95 144.49 162.92 140.36 164.17C136.46 163.95 133.06 163.22 130.0 161.94C131.66 161.24 133.21 160.38 134.68 159.35C134.99 159.13 135.29 158.90 135.58 158.66C137.84 159.51 140.51 159.93 143.46 159.93C146.60 159.93 149.35 159.40 151.65 158.39ZM130.00 117.85C129.49 117.99 128.95 118.07 128.39 118.07C125.13 118.07 122.82 115.48 122.82 111.93C122.82 109.18 123.96 106.34 126.01 103.88C127.24 105.00 127.96 106.35 127.96 107.80C127.96 108.57 127.96 108.57 126.81 111.16C126.52 112.02 126.33 112.79 126.33 113.46C126.33 115.48 127.89 117.24 130.00 117.85ZM130.00 117.85C132.11 117.24 133.67 115.48 133.67 113.46C133.67 112.79 133.48 112.02 133.19 111.16C132.04 108.57 132.04 108.57 132.04 107.80C132.04 106.35 132.76 105.00 133.99 103.88C136.04 106.34 137.18 109.18 137.18 111.93C137.18 115.48 134.87 118.07 131.61 118.07C131.05 118.07 130.51 117.99 130.00 117.85ZM158.60 151.37C157.26 154.58 154.90 156.97 151.65 158.39C154.28 156.38 156.62 154.02 158.60 151.37Z"/></svg>
+    <div class="wm">Primates Arena<small>Powered by SOV3RN</small></div>
+  </div>
+  <div class="tag">rulebook · read time 4 min</div>
+</header>
+
+<section class="hero">
+  <div class="in">
+    <div class="eyebrow">Skill pick’em · Discord · open to everyone</div>
+    <h1>Free.<br>Zero stakes.<br><span class="r">Same seat</span> for everybody.</h1>
+    <p class="lede">Pick winners. Build streaks. Earn honors that never come off your card — and a shot at Primates that leave the operator’s wallet, never money. No purchase. No holding requirement. Ever.</p>
+    <div class="board">
+      <div><b>4</b><span>sprints · The Jungle Season</span></div>
+      <div><b>8</b><span>picks a day</span></div>
+      <div><b>−4</b><span>every wrong pick, no matter who</span></div>
+      <div><b>0</b><span>dollars, ever</span></div>
+    </div>
+    <a class="cta" href="#play">Run <code>/arena</code> in Discord</a>
+  </div>
+</section>
+
+<div class="wrap">
+<nav class="idx" aria-label="Sections">
+  <div class="eyebrow">On this page</div>
+  <ol>
+    <li><a href="#what">What this is</a></li>
+    <li><a href="#play">How to play</a></li>
+    <li><a href="#earn">What you earn</a></li>
+    <li><a href="#elim">The Eliminator</a></li>
+    <li><a href="#cal">The season</a></li>
+    <li><a href="#rules">House rules</a></li>
+    <li><a href="#receipts">Receipts</a></li>
+    <li><a href="#cmds">Commands</a></li>
+  </ol>
+</nav>
+
+<main>
+<section id="what">
+  <div class="eyebrow">What this is</div>
+  <h2>A pick’em for the jungle, run in the open</h2>
+  <p class="big">The Arena is a free skill game inside the Primates Discord. Every day a board of real games goes up — NFL, college football, MMA, whatever’s in season. You pick winners. Right picks pay, wrong picks cost, streaks multiply. That’s the whole game.</p>
+  <p>Nothing here costs anything and nothing here pays out in money. What you can win is permanent honors on your card, and — through the season’s draws — Primates the operator has already set aside. Every seat is the same seat: a holder and a first-day visitor play the exact same board on the exact same terms.</p>
+  <p>It’s also the front door to SOV3RN. If you’re new to all of this, the Arena is where you start.</p>
+</section>
+
+<section id="play">
+  <div class="eyebrow">How to play</div>
+  <h2>Pick. Lock. Settle.</h2>
+  <p>Run <span class="cmd">/arena</span> in the Arena channel. Today’s board comes up with a price next to every side. Tap the side you like. That’s a pick. It locks at that game’s kickoff, and you can change your mind any time before then.</p>
+
+  <div class="slate" aria-label="Example board">
+    <div class="hd"><span>SUNDAY · NFL · 14 GAMES</span><span>picks 3 / 8</span></div>
+    <div class="row picked"><div class="teams"><strong>Jets</strong><em>at Bills · 1:00 PM ET</em></div><div class="px dog">+28<small>underdog</small></div></div>
+    <div class="row"><div class="teams"><strong>Bills</strong><em>vs Jets · 1:00 PM ET</em></div><div class="px">+8<small>favorite</small></div></div>
+    <div class="row picked"><div class="teams"><strong>Cowboys</strong><em>at Eagles · 4:25 PM ET</em></div><div class="px">+12<small>pick’em</small></div></div>
+  </div>
+  <p><em style="color:var(--dim);font-size:14px">Example board. Prices are illustrative; real ones come from the day’s odds.</em></p>
+
+  <h3>The math</h3>
+  <div class="math">
+    <div class="pos"><b>+price</b><span>right pick pays the price you took</span></div>
+    <div class="neg"><b>−4</b><span>wrong pick, favorite or dog</span></div>
+    <div><b>×</b><span>streaks multiply your payout</span></div>
+  </div>
+  <p>The price is set the moment you pick, not when the game ends. Underdogs pay the most because they lose the most. A tie or a cancelled game is a <b>void</b> — your pick is refunded, nothing gained, nothing lost.</p>
+  <p>Eight picks a day. Use them on the games you actually have a read on; a wrong pick costs the same whether you took a lock or a longshot.</p>
+  <p><b>The board runs in sprints.</b> Four this season, about four weeks each, every sport on every board. Each sprint ends with a podium, permanent badges, and a prize to the champion — a different one every sprint. Then the board resets to zero and everyone is back in it. Sprint 1, <b>Opening Drive</b>, runs Sept 9 → Oct 6; the champion takes home a Misfit.</p>
+  <div class="callout"><b>Your card is public.</b> <span class="cmd">/arena_dashboard</span> shows your score, streak, badges and rank. Tap <b>Share to channel</b> and it drops in the room. Half of what makes this fun is everyone seeing the board.</div>
+</section>
+
+<section id="earn">
+  <div class="eyebrow">What you earn</div>
+  <h2>Honors are forever. Presence pays.</h2>
+  <p>Every contest ends with permanent badges — podium, participation, milestones. Once a badge is on your card it can never be taken away, not by a reset, not by a new season. The honors ledger only ever grows.</p>
+  <p><b>Career 1,000 points</b> puts you in the <b>1K Club</b> — a standing badge, with your name in the receipts below.</p>
+
+  <h3>The presence ladder — season-long, across every sprint</h3>
+  <p>You don’t have to be the best to win this season. You have to be here. Make at least one pick in a week — any sport, any day — and that week counts, and it keeps counting across sprint closes. Rungs are permanent badges <em>and</em> entries in the season Primate draw.</p>
+  <ol class="ladder">
+    <li><div class="wk">4<small>weeks</small></div><div class="nm">Suited Up<em>first rung · first draw entry</em></div><div class="pill">badge + entry</div></li>
+    <li><div class="wk">9<small>weeks</small></div><div class="nm">Iron Man<em>half the season, present</em></div><div class="pill">badge + entries</div></li>
+    <li><div class="wk">14<small>weeks</small></div><div class="nm">Every Snap<em>almost nobody misses this many</em></div><div class="pill">badge + entries</div></li>
+    <li class="top"><div class="wk">18<small>weeks</small></div><div class="nm">Wire to Wire<em>every week of the season. All of them.</em></div><div class="pill">badge + entries</div></li>
+  </ol>
+
+  <h3>And the room wins together</h3>
+  <p>A stash of football-trait Primates is already earmarked for this season — leaving the operator’s wallet, not sitting in it. As the room grows, more of them enter the draw:</p>
+  <div class="rungs">
+    <div><b>15</b><span>active members</span></div>
+    <div><b>25</b><span>active members</span></div>
+    <div><b>40</b><span>active members</span></div>
+  </div>
+  <p>Nothing you earn is ever conditional on anyone else. The milestones only ever add. Draws are run in public — entry lists posted first, then the draw.</p>
+</section>
+
+<section id="elim">
+  <div class="eyebrow">The Eliminator</div>
+  <h2>One team a week. Lose, and the Boneyard has you.</h2>
+  <p>Survivor, Primates-style. Every NFL week you pick <b>one team</b> to win straight-up. Win, you live. Can’t reuse a team all season. Miss the deadline and the bot picks your biggest unused favorite for you — forgetting is not how you go out here.</p>
+  <div class="states">
+    <div class="st"><b>The Living</b><span>Alive. One pick a week. Win and stay.</span></div>
+    <div class="arr">first loss →</div>
+    <div class="st bone"><b>The Boneyard</b><span>Undead. Keep picking with one life left.</span></div>
+    <div class="arr">second loss →</div>
+    <div class="st fall"><b>The Fallen</b><span>Out — but your weeks survived are on the record.</span></div>
+  </div>
+  <p>A tie means you survive (the team is still burned). A cancelled game refunds the pick entirely — the team comes back to you. And if a week would wipe out <em>every</em> remaining player in a bracket, nobody in that bracket falls: the jungle survives together.</p>
+  <p>Last one standing enters the ledger for good — and the Boneyard has a throne of its own. <span class="cmd">/eliminator</span> to join or pick. <span class="cmd">/eliminator_board</span> for the Living, the Undead and the Fallen. Late? You can join through Week 2’s first kickoff and start fresh with all 32 teams.</p>
+</section>
+
+<section id="cal">
+  <div class="eyebrow">The season</div>
+  <h2>The Jungle Season</h2>
+  <div class="cal">
+    <div><time>Sept 9</time><p>The Jungle Season opens. Sprint 1 — <em>Opening Drive</em> — begins; Road to Kickoff champion crowned and paid.</p></div>
+    <div><time>Oct 6</time><p>Opening Drive closes. Sprint champion takes the Misfit; Sprint 2 opens the next morning with its own prize.</p></div>
+    <div class="live"><time>Thursdays</time><p>Eliminator picks lock at each team’s kickoff — the first ones Thursday night, Week 1.</p></div>
+    <div><time>Saturdays</time><p>College football boards, up to 20 games deep.</p></div>
+    <div><time>Sundays</time><p>NFL slates, all day. Picks lock per game.</p></div>
+    <div><time>Week 4</time><p>First presence rung can mint — <em>Suited Up</em> for anyone with four weeks on the board.</p></div>
+    <div><time>Jan 10</time><p>Sprint 4 and the season close. Final board, final draw, honors minted, archive sealed.</p></div>
+  </div>
+  <p>Every sport stays on the board all season — MMA cards, college Saturdays, and the fall’s other seasons as they open. Football is the headline, not the fence. A game belongs to whichever sprint its kickoff falls inside.</p>
+</section>
+
+<section id="rules">
+  <div class="eyebrow">House rules</div>
+  <h2>The compass</h2>
+  <p>These don’t change, and they don’t bend for anyone — including the operator.</p>
+  <ul class="rules">
+    <li><b>Free, forever.</b> No buy-in, no holding requirement, no gate on eligibility. Every seat is the same seat.</li>
+    <li><b>Rewards are merch, NFTs and traits. Never money.</b> Nothing here pays out in dollars or tokens, and nothing here ever will.</li>
+    <li><b>Honors are only ever added.</b> A badge on your card stays there. Resets don’t touch it. New seasons don’t touch it.</li>
+    <li><b>A void only ever refunds.</b> Ties, cancellations, no-contests: the pick comes back to you. Nothing is taken.</li>
+    <li><b>We never guess a result.</b> If a winner can’t be verified from an official source, the game is a void — not a best effort.</li>
+    <li><b>A game belongs to the contest its kickoff falls in.</b> No moving fixtures between contests to change a board.</li>
+    <li><b>Prizes are announced when they’re in hand.</b> What’s promised is what’s already set aside. Everything else is a hint, and we say so.</li>
+    <li><b>Everything happens in public.</b> Boards, settlements, draws, transfers — with receipts in the channel.</li>
+  </ul>
+</section>
+
+<section id="receipts">
+  <div class="eyebrow">Receipts</div>
+  <h2>On the record</h2>
+  <div class="receipts">
+    <div><div><b>Road to 1K</b><em>Sprint · closed Aug 15, 2026 · champion</em></div><div class="pts">Shivam uchiha · +1088</div></div>
+    <div><div><b>Road to Kickoff</b><em>Sprint · closed Sept 8, 2026 · champion · vault Primate, football pads</em></div><div class="pts">UltraAlpha7 · +1707</div></div>
+    <div><div><b>1K Club</b><em>Career 1,000 points · in order of crossing</em></div><div class="pts">Shivam uchiha · FlannelMerc · Lord Skywanker · pArtySHIP · UltraAlpha7</div></div>
+  </div>
+  <p>Contest archives are kept in full. Podium badges, participation badges and milestones from every sprint are on the winners’ cards today — run their <span class="cmd">/arena_dashboard</span> and look.</p>
+</section>
+
+<section id="cmds">
+  <div class="eyebrow">Commands</div>
+  <h2>Four commands. That’s all of it.</h2>
+  <div class="cmds">
+    <span class="cmd">/arena</span><p>Today’s board. Pick, change picks, see the sprint standings.</p>
+    <span class="cmd">/arena_dashboard</span><p>Your card — score, streak, badges, rank. <b>Share to channel</b> posts it.</p>
+    <span class="cmd">/eliminator</span><p>Join the Eliminator, or make this week’s pick. Re-pick until your team kicks off.</p>
+    <span class="cmd">/eliminator_board</span><p>The Living, the Boneyard, the Fallen. Who’s left.</p>
+  </div>
+  <p>Your Primate itself lives on the <a href="https://primates-passport.com" rel="noopener">Passport</a> and gets customized in the <a href="https://primateslab.com" rel="noopener">Lab</a>. The Arena is where you earn. See you on the board. 🦍</p>
+</section>
+</main>
+</div>
+
+<footer><b>Primates Arena</b> · skill game, zero stakes · powered by SOV3RN</footer>
+</body>
+</html>
