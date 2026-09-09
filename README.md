@@ -32,6 +32,26 @@ build overwrites them.
 Static files (`og-arena.png`, `favicon.png`, `CNAME`, the root redirect) are not
 regenerated — edit them in place.
 
+## Hosting — the plan gate (found 2026-09-09)
+
+`sovrn-bot` is a **private** repo on the GitHub **Free** plan, and Pages on a private
+repo needs Pro/Team — the API refuses with *"Your current plan does not support GitHub
+Pages for this repository."* Two ways through, operator's call:
+
+1. **Upgrade the account to GitHub Pro** (~$4/mo) → Settings → Pages → Source: `main`,
+   folder `/site` → custom domain `sov3rn.gg` → Enforce HTTPS. Nothing else changes.
+2. **A public site repo** (free): create an empty public repo
+   `github.com/POP1of1/sov3rn.gg`, then from this repo run
+
+   ```
+   make site-publish            # pushes ONLY the site/ subtree as that repo's main
+   ```
+
+   and in that repo: Settings → Pages → Source: `main`, folder `/ (root)` → custom domain
+   `sov3rn.gg` → Enforce HTTPS. Every later update is `make site` here, commit, then
+   `make site-publish`. The bot, briefs, and data never leave the private repo — only
+   `site/` is pushed.
+
 ## DNS (apex on GitHub Pages)
 
 Apex `sov3rn.gg` → four `A` records and four `AAAA` records to GitHub's Pages edge;
