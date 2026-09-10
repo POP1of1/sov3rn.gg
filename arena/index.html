@@ -176,8 +176,8 @@
       <div class="eyebrow">Tap one · your first pick</div>
       <h2>Who wins?</h2>
       <div class="choice" id="pickc">
-        <button data-side="dog"><b>Jets</b><span class="dog">+28</span><small>underdog</small></button>
-        <button data-side="fav"><b>Bills</b><span>+8</span><small>favorite</small></button>
+        <button data-side="dog"><b>Jets</b><span class="dog">+20</span><small>underdog</small></button>
+        <button data-side="fav"><b>Bills</b><span>+6</span><small>favorite</small></button>
       </div>
       <div class="result" id="pickr">The price next to each side is what a right pick pays. Underdogs pay most.</div>
     </section>
@@ -188,7 +188,7 @@
       <div class="eyebrow">Tap WIN three times · then take a loss</div>
       <h2>Stack it.</h2>
       <div class="meter" id="meter"><i></i><i></i><i></i><i></i><i></i></div>
-      <div style="display:flex;align-items:center;gap:14px"><div class="num" id="sk">0</div><div class="result" id="skr" style="flex:1">Streak 0. Every win multiplies the next payout.</div></div>
+      <div style="display:flex;align-items:center;gap:14px"><div class="num" id="sk">0</div><div class="result" id="skr" style="flex:1">Streak 0. Every win multiplies the next score.</div></div>
       <div class="choice"><button id="winb"><b>Win</b><span class="dog">+price</span></button><button id="loseb" disabled><b>Lose</b><span style="color:var(--red)">−4</span></button></div>
     </section>
 
@@ -298,15 +298,15 @@
     [...$('pickc').children].forEach(x=>{x.disabled=true;x.classList.toggle('pick',x===b);});
     const dog=b.dataset.side==='dog';
     $('pickr').innerHTML = dog
-      ? `<b>Locked at +28</b> — the price you took, not the price at kickoff. Jets win: <span class="pos">+28</span>. Jets lose: <span class="neg">−4</span>. Underdogs pay most because they lose most.`
-      : `<b>Locked at +8</b> — the price you took, not the price at kickoff. Bills win: <span class="pos">+8</span>. Bills lose: <span class="neg">−4</span>. Same −4 as the longshot. Favorites are safe, not free.`;
+      ? `<b>Locked at +20</b> — the price you took, not the price at kickoff. Jets win: <span class="pos">+20</span>. Jets lose: <span class="neg">−4</span>. Underdogs pay most because they lose most.`
+      : `<b>Locked at +6</b> — the price you took, not the price at kickoff. Bills win: <span class="pos">+6</span>. Bills lose: <span class="neg">−4</span>. Same −4 as the longshot. Favorites are safe, not free.`;
     stamp('pick'); unlock(1);
   });
 
   // 2 STREAK
   let sk=0; const bars=[...$('meter').children];
   $('winb').onclick=()=>{ if(sk>=3)return; sk++; $('sk').textContent=sk; bars.forEach((b,k)=>{b.classList.toggle('lit',k<sk);b.style.height=(22+k*18)+'%';});
-    const msgs=['','Streak 1. Nice. Again.','Streak 2. The next one pays more.','<b>Streak 3.</b> Payouts are multiplying now. This is the whole game. Now take a loss.'];
+    const msgs=['','Streak 1. Nice. Again.','Streak 2. The next one pays more.','<b>Streak 3.</b> Your score is multiplying now. This is the whole game. Now take a loss.'];
     $('skr').innerHTML=msgs[sk]; if(sk===3){$('winb').disabled=true;$('loseb').disabled=false;stamp('streak');} };
   $('loseb').onclick=()=>{ $('loseb').disabled=true; $('sk').textContent='0'; bars.forEach(b=>{b.classList.remove('lit');b.classList.add('dead');});
     $('flash').classList.add('go'); setTimeout(()=>$('flash').classList.remove('go'),120);
