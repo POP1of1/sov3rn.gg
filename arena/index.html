@@ -176,10 +176,10 @@
       <div class="eyebrow">Tap one · your first pick</div>
       <h2>Who wins?</h2>
       <div class="choice" id="pickc">
-        <button data-side="dog"><b>Jets</b><span class="dog">+15</span><small>underdog</small></button>
+        <button data-side="dog"><b>Jets</b><span class="dog">+20</span><small>underdog</small></button>
         <button data-side="fav"><b>Bills</b><span>+6</span><small>favorite</small></button>
       </div>
-      <div class="result" id="pickr">A right pick pays the price next to it: +6 favorite, +10 close game, +15 underdog. A wrong pick is −4.</div>
+      <div class="result" id="pickr">A right pick pays the price next to it: +6 favorite, +10 close game, +15 underdog, +20 big underdog, +25 longshot. A wrong pick is −4.</div>
     </section>
 
     <!-- 2 STREAK -->
@@ -296,7 +296,7 @@
     [...$('pickc').children].forEach(x=>{x.disabled=true;x.classList.toggle('pick',x===b);});
     const dog=b.dataset.side==='dog';
     $('pickr').innerHTML = dog
-      ? `<b>Locked at +15</b> — the price you took, not the price at kickoff. Jets win: <span class="pos">+15</span>. Jets lose: <span class="neg">−4</span>. Underdogs pay most because they lose most.`
+      ? `<b>Locked at +20</b> — the price you took, not the price at kickoff. Jets win: <span class="pos">+20</span>. Jets lose: <span class="neg">−4</span>. Underdogs pay most because they lose most.`
       : `<b>Locked at +6</b> — the price you took, not the price at kickoff. Bills win: <span class="pos">+6</span>. Bills lose: <span class="neg">−4</span>. Same −4 as the longshot. Favorites are safe, not free.`;
     stamp('pick'); unlock(1);
   });
