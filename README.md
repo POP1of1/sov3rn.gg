@@ -6,7 +6,8 @@ here is what GitHub reads). Static only: no build on GitHub's side, no Jekyll
 
 | Path | Serves | Source |
 |---|---|---|
-| `index.html` | `https://sov3rn.gg/` → instant redirect to `/arena/` | hand-written, edit in place |
+| `index.html` | `https://sov3rn.gg/` — the SOV3RN front door (hero, philosophy, the toolkit, the door, Request Entry by email) | hand-written, edit in place |
+| `sovrn-emblem.svg` | the official emblem (`framework/brand_assets/engraving`, light-union, geometry untouched) printed in Sovereign Gold; the front door's mark and favicon | static |
 | `arena/index.html` | `https://sov3rn.gg/arena/` — the Start Here deck | **generated** from `framework/START_HERE_arena.html` |
 | `arena/rulebook.html` | `https://sov3rn.gg/arena/rulebook.html` | **generated** from `framework/ARENA_RULEBOOK.html` |
 | `arena/og-arena.png` | 1200×630 social card | static (Arena room's site_handoff v3) |
@@ -29,7 +30,7 @@ in `<body>` — the exact shape of the Arena room's handoff with the placeholder
 resolved. It never edits the fragment itself. Never hand-edit `arena/*.html`; the next
 build overwrites them.
 
-Static files (`og-arena.png`, `favicon.png`, `CNAME`, the root redirect) are not
+Static files (`og-arena.png`, `favicon.png`, `CNAME`, `sovrn-emblem.svg`, the root page) are not
 regenerated — edit them in place.
 
 ## Hosting — the plan gate (found 2026-09-09)
